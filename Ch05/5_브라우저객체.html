@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_브라우저 객체</title>
+
+    <!-- 
+        날짜 : 2022/10/11
+        이름 : 설우영
+        내용 : 자바스크립트 브라우저 객체(BOM) 실습하기
+
+        브라우저 객체
+        - HTML이 출력되는 브라우저와 관련된 객체로 document, location, navigation 등
+        - location.href 기능으로 페이지 이동
+
+     -->
+
+     <script>
+
+        function goNaver(){
+            window.location.href = 'https://naver.com';
+        }
+
+     </script>
+</head>
+<body>
+    <h3>브라우저 객체 실습</h3>
+
+    <button onclick="window.alert('기본 대화상자')">대화 상자</button>
+    <button onclick="window.confirm('확인,취소 대화상자')">대화 상자</button>
+
+    <button onclick="goNaver()">네이버</button>
+    <button onclick="history.forward()">앞으로</button>
+    <button onclick="history.back">뒤로</button>
+    
+</body>
+</html>
