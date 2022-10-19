@@ -39,6 +39,23 @@
             left: 200%;
             top: 0;
         }
+        @media all and (min-width:1280px) {
+            section > div:nth-child(3){
+            left: 300%;
+            top: 0;
+        }
+        @media all and (min-width:760px) {
+            section > div:nth-child(3){
+            left: 300%;
+            top: 0;
+        }
+
+        @media all and (min-width:360px) {
+            section > div:nth-child(3){
+            left: 300%;
+            top: 0;
+        }
+  }
      </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
      <script>
@@ -56,9 +73,9 @@
                 }
 
                 slider.eq(i).css('left','100%').animate({'left':'0'},1000); 
-            },3000)
+            },3000);
             
-
+        
         })
      </script>
 </head>

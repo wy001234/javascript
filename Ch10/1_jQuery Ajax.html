@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1_jQuery Ajax</title>
+    <!-- 
+        날짜 : 2022/10/19
+        이름 : 설우영
+        내용 : jQuery Ajax 통신 실습하기
+     -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+     <script>
+        $(function(){
+            $('button').click(function(){
+                $.ajax({
+                    url: 'http://chhak.or.kr/data/user.json',
+                    type:'GET',
+                    dataType:'json',
+                    success:function(data){
+                        console.log(data);
+                        $('p > span:eq(0)').text(data.uid)
+                        $('p > span:eq(1)').text(data.name)
+                        $('p > span:eq(2)').text(data.hp)
+                        $('p > span:eq(3)').text(data.age)
+                    },
+                    error:function(){
+                        console.log('error!')
+                    }
+                });
+            })
+        })
+     </script>
+</head>
+<body>
+    <h3>1.Ajax</h3>
+
+    <button>데이터 운영하기</button>
+    <p>
+        아이디 : <span></span><br>
+        이름 : <span></span><br>
+        휴대폰 : <span></span><br>
+        나이 : <span></span><br>
+    </p>
+</body>
+</html>
